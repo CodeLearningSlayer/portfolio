@@ -98,6 +98,104 @@
     }
 }
 
+.switch {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+  }
+  
+  .switch > span {
+    position: absolute;
+    top: 7px;
+    pointer-events: none;
+    font-family: 'Helvetica', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .06);
+    width: 55%;
+    text-align: center;
+  }
+  
+  input.check-toggle-round-flat:checked ~ .off {
+    color: #E2A300;
+  }
+  
+  input.check-toggle-round-flat:checked ~ .on {
+    color: #fff;
+  }
+  
+  .switch > span.on {
+    left: 0px;
+    padding-left: 2px;
+    color: #E2A300;
+  }
+  
+  .switch > span.off {
+    right: -5px;
+    padding-right: 4px;
+    color: #fff;
+  }
+  
+  .check-toggle {
+    position: absolute;
+    margin-left: -9999px;
+    visibility: hidden;
+  }
+  .check-toggle + label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+  }
+  
+  input.check-toggle-round-flat + label {
+    border: 1px solid white;
+    padding: 2px;
+    width: 101px;
+    height: 35px;
+    background-color: rgb(43, 43, 43);
+    border-radius: 60px;
+  }
+  input.check-toggle-round-flat + label:before, input.check-toggle-round-flat + label:after {
+    display: block;
+    position: absolute;
+    content: "";
+  }
+  
+  input.check-toggle-round-flat + label:before {
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    right: 2px;
+    background-color: rgb(43, 43, 43);
+    border-radius: 60px;
+  }
+  input.check-toggle-round-flat + label:after {
+    top: 4px;
+    left: 4px;
+    bottom: 4px;
+    width: 48px;
+    background-color: #fff;
+    -webkit-border-radius: 52px;
+    -moz-border-radius: 52px;
+    -ms-border-radius: 52px;
+    -o-border-radius: 52px;
+    border-radius: 52px;
+    -webkit-transition: margin 0.2s;
+    -moz-transition: margin 0.2s;
+    -o-transition: margin 0.2s;
+    transition: margin 0.2s;
+  }
+  
+  input.check-toggle-round-flat:checked + label {
+  }
+  
+  input.check-toggle-round-flat:checked + label:after {
+    margin-left: 44px;
+  }
+
 .content{
     padding-top: 88px;
     &__inner{
@@ -128,6 +226,7 @@
         color:#000;
         padding: 14px 38px;
         border-radius: 6px;
+        display: inline-block;
         border:none;
         cursor: pointer;
         background: linear-gradient(87.32deg, #E2A300 4.47%, #E29500 95.53%);

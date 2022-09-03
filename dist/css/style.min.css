@@ -953,6 +953,104 @@ body {
   background-image: url("../img/logo-icons/monkey smile.svg");
 }
 
+.switch {
+  position: relative;
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.switch > span {
+  position: absolute;
+  top: 7px;
+  pointer-events: none;
+  font-family: "Helvetica", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+  width: 55%;
+  text-align: center;
+}
+
+input.check-toggle-round-flat:checked ~ .off {
+  color: #E2A300;
+}
+
+input.check-toggle-round-flat:checked ~ .on {
+  color: #fff;
+}
+
+.switch > span.on {
+  left: 0px;
+  padding-left: 2px;
+  color: #E2A300;
+}
+
+.switch > span.off {
+  right: -5px;
+  padding-right: 4px;
+  color: #fff;
+}
+
+.check-toggle {
+  position: absolute;
+  margin-left: -9999px;
+  visibility: hidden;
+}
+
+.check-toggle + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+
+input.check-toggle-round-flat + label {
+  border: 1px solid white;
+  padding: 2px;
+  width: 101px;
+  height: 35px;
+  background-color: rgb(43, 43, 43);
+  border-radius: 60px;
+}
+
+input.check-toggle-round-flat + label:before, input.check-toggle-round-flat + label:after {
+  display: block;
+  position: absolute;
+  content: "";
+}
+
+input.check-toggle-round-flat + label:before {
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  right: 2px;
+  background-color: rgb(43, 43, 43);
+  border-radius: 60px;
+}
+
+input.check-toggle-round-flat + label:after {
+  top: 4px;
+  left: 4px;
+  bottom: 4px;
+  width: 48px;
+  background-color: #fff;
+  -webkit-border-radius: 52px;
+  -moz-border-radius: 52px;
+  -ms-border-radius: 52px;
+  -o-border-radius: 52px;
+  border-radius: 52px;
+  -webkit-transition: margin 0.2s;
+  -moz-transition: margin 0.2s;
+  -o-transition: margin 0.2s;
+  transition: margin 0.2s;
+}
+
+input.check-toggle-round-flat:checked + label:after {
+  margin-left: 44px;
+}
+
 .content {
   padding-top: 88px;
 }
@@ -984,6 +1082,7 @@ body {
   color: #000;
   padding: 14px 38px;
   border-radius: 6px;
+  display: inline-block;
   border: none;
   cursor: pointer;
   background: linear-gradient(87.32deg, #E2A300 4.47%, #E29500 95.53%);
@@ -1283,6 +1382,9 @@ body {
   .main__text {
     font-size: 18px;
   }
+  .header__nav-item + .header__nav-item {
+    margin-left: 105px;
+  }
 }
 @media (max-width: 992px) {
   .content__left-box {
@@ -1329,6 +1431,45 @@ body {
     max-width: fit-content;
     margin-left: 0;
     margin-top: 30px;
+  }
+}
+@media (max-width: 895px) {
+  .header__nav {
+    z-index: 6;
+    background-color: rgba(40, 40, 40, 0.9647058824);
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+    right: 0;
+    box-shadow: 5px 0px 10px 5px rgb(39, 37, 37);
+    top: 0;
+    padding-right: 50px;
+    position: absolute;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: start;
+    max-width: 300px;
+    transform: translateX(200%);
+  }
+  .header__nav--active {
+    transform: translateX(0);
+  }
+  .header__nav-item {
+    margin-right: 1.5em;
+  }
+  .header__nav-item + .header__nav-item {
+    margin-left: 0;
+    margin-top: 25px;
+  }
+  .header__nav-link {
+    font-size: 40px;
+    line-height: 54px;
+  }
+  .header__burger {
+    display: block;
+    z-index: 10;
+  }
+  ul.header__nav {
+    padding-top: 100px;
   }
 }
 @media (max-width: 840px) {
@@ -1379,43 +1520,6 @@ body {
   .content__img-box {
     max-width: 600px;
     margin: 0 auto;
-  }
-  .header__nav {
-    z-index: 6;
-    background-color: rgba(40, 40, 40, 0.9647058824);
-    width: 100%;
-    transition: all 0.5s ease-in-out;
-    right: 0;
-    box-shadow: 5px 0px 10px 5px rgb(39, 37, 37);
-    top: 0;
-    padding-right: 50px;
-    position: absolute;
-    flex-direction: column;
-    height: 100vh;
-    justify-content: start;
-    max-width: 300px;
-    transform: translateX(200%);
-  }
-  .header__nav--active {
-    transform: translateX(0);
-  }
-  .header__nav-item {
-    margin-right: 1.5em;
-  }
-  .header__nav-item + .header__nav-item {
-    margin-left: 0;
-    margin-top: 25px;
-  }
-  .header__nav-link {
-    font-size: 40px;
-    line-height: 54px;
-  }
-  .header__burger {
-    display: block;
-    z-index: 10;
-  }
-  ul.header__nav {
-    padding-top: 100px;
   }
   .portfolio {
     padding: 85px 0 65px;
@@ -1528,5 +1632,14 @@ body {
   .main__title {
     text-align: center;
     font-size: 40px;
+  }
+  .logo__text {
+    display: none;
+  }
+  .switch {
+    margin: 0 15%;
+  }
+  .portfolio__title {
+    font-size: 41px;
   }
 }

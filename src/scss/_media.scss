@@ -11,6 +11,14 @@
             font-size: 18px;
         }
     }
+
+    .header{
+        &__nav-item{
+            &+.header__nav-item{
+                margin-left: 105px;
+            }
+        }
+    }
 }
 
 
@@ -65,6 +73,48 @@
             margin-left: 0;
             margin-top: 30px;
         }
+    }
+}
+
+@media(max-width:895px){
+    .header{
+        &__nav{
+            z-index: 6;
+            background-color: #282828f6;
+            width: 100%;
+            transition: all .5s ease-in-out;
+            right: 0;
+            box-shadow: 5px 0px 10px 5px rgb(39, 37, 37);
+            top:0;
+            padding-right: 50px;
+            position: absolute;
+            flex-direction: column;
+            height: 100vh;
+            justify-content: start;
+            max-width: 300px;
+            transform: translateX(200%);
+        }
+        &__nav--active{
+            transform: translateX(0);
+        }
+        &__nav-item{
+            margin-right: 1.5em;
+            &+.header__nav-item{
+                margin-left: 0;
+                margin-top: 25px;
+            }
+        }
+        &__nav-link{
+            font-size: 40px;
+            line-height: 54px;
+        }
+        &__burger{
+            display: block;
+            z-index: 10;
+        }
+    }
+    ul.header__nav{
+        padding-top: 100px;
     }
 }
 
@@ -127,45 +177,7 @@
             margin: 0 auto;
         }
     }
-    .header{
-        &__nav{
-            z-index: 6;
-            background-color: #282828f6;
-            width: 100%;
-            transition: all .5s ease-in-out;
-            right: 0;
-            box-shadow: 5px 0px 10px 5px rgb(39, 37, 37);
-            top:0;
-            padding-right: 50px;
-            position: absolute;
-            flex-direction: column;
-            height: 100vh;
-            justify-content: start;
-            max-width: 300px;
-            transform: translateX(200%);
-        }
-        &__nav--active{
-            transform: translateX(0);
-        }
-        &__nav-item{
-            margin-right: 1.5em;
-            &+.header__nav-item{
-                margin-left: 0;
-                margin-top: 25px;
-            }
-        }
-        &__nav-link{
-            font-size: 40px;
-            line-height: 54px;
-        }
-        &__burger{
-            display: block;
-            z-index: 10;
-        }
-    }
-    ul.header__nav{
-        padding-top: 100px;
-    }
+    
     .portfolio{
         padding: 85px 0 65px;
     }
@@ -296,6 +308,22 @@
         &__title{
             text-align: center;
             font-size: 40px;
+        }
+    }
+
+    .logo{
+        &__text{
+            display: none;
+        }
+    }
+
+    .switch{
+        margin: 0 15%;
+    }
+
+    .portfolio{
+        &__title{
+            font-size: 41px;
         }
     }
 }

@@ -1,16 +1,19 @@
 import * as flsFunctions from "./modules/functions.js";
 import Swiper, {Navigation} from "swiper";
+import {langObj} from "./modules/languages.js";
+import {changeLang} from "./modules/changeLang.js";
 
 let swiper;
 
+
 function enableSwiper(){
-        swiper = new Swiper('.swiper', {
+    swiper = new Swiper('.swiper', {
         modules:[Navigation],
         watchSlidesProgress:true,
         centeredSlides: true,
-        loop: true,
-        loopedSlides: 4,
-        slidesPerGroup:1,
+        // loop: true,
+        // loopedSlides: 4,
+        // slidesPerGroup:1,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -25,18 +28,18 @@ function enableSwiper(){
                 slidesPerView: 1,
             },
         }
-    })
+    });
 }
 
 const breakpoint = window.matchMedia('(max-width: 576px)');
 const breakpointChecker = function() {
-  if (breakpoint.matches == true && swiper!=undefined){
-    swiper.destroy(true, true);
-  }
-  else if (breakpoint.matches==false){
-    return enableSwiper();
-  }
-}
+    if (breakpoint.matches == true && swiper!=undefined){
+        swiper.destroy(true, true);
+    }
+    else if (breakpoint.matches==false){
+        return enableSwiper();
+    }
+};
 breakpoint.addListener(breakpointChecker);
 breakpointChecker();
 
@@ -50,10 +53,10 @@ const observer = new IntersectionObserver((entries)=>{
                 getId(link)===entry.target.id);
             });
         }
-
+        
     })
 },{
-    threshold:0.6,
+    threshold:0.2,
 });
 
 function Scroll(event, name){
@@ -78,7 +81,7 @@ burgerBtn.addEventListener("click", function(){
 window.addEventListener("scroll", function(){
     let header = document.querySelector(".header__top");
     header.classList.toggle("header__top--sticky", window.scrollY > 0);
-})
+});
 
 let upBtn = document.querySelector(".footer__up");
 let contactBtn = document.querySelector(".content__contact-btn");
@@ -93,4 +96,10 @@ document.querySelectorAll(".section").forEach((section)=>observer.observe(sectio
 document.querySelector('.header__nav').addEventListener('click', (event)=> Scroll(event, 'header__nav-link'));
 document.querySelector('.footer__nav').addEventListener('click', (event)=> Scroll(event, 'footer__nav-link'));
 
-flsFunctions.testWebP();
+
+//Lang change
+
+changeLang();
+
+
+// flsFunctions.testWebP();
