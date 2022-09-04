@@ -2,6 +2,7 @@ import * as flsFunctions from "./modules/functions.js";
 import Swiper, {Navigation} from "swiper";
 import {langObj} from "./modules/languages.js";
 import {changeLang} from "./modules/changeLang.js";
+import removeOnScroll from "./modules/removeHeaderOnScroll.js";
 
 let swiper;
 
@@ -66,7 +67,7 @@ function Scroll(event, name){
         window.scrollTo({
             top: document.getElementById(id).offsetTop,
             behavior:"smooth"
-        })
+        });
     }
 }
 
@@ -100,6 +101,10 @@ document.querySelector('.footer__nav').addEventListener('click', (event)=> Scrol
 //Lang change
 
 changeLang();
+
+//Removing sticky header on scroll
+
+removeOnScroll();
 
 
 // flsFunctions.testWebP();

@@ -17,6 +17,9 @@
         &--sticky{
             padding-bottom: 75px;
             background-color: #282828de;
+        }
+        &--out{
+            transform: translateY(-100%);
         }   
     }
     &__nav{
@@ -357,7 +360,7 @@
 
 .portfolio{
     background-color: #282828;
-    padding: 100px 0 150px;
+    padding: 125px 0 150px;
     &__title{
         font-size: 48px;
         line-height: 54px;
