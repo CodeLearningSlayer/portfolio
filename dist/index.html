@@ -4,14 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.min.css?__v=20220904170542" />
+    <link rel="stylesheet" href="css/style.min.css" />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css?__v=20220904170542"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
     />
     <title>My site</title>
   </head>
   <body>
+
+    <div class="preloader">
+      <svg width="200" height="200" viewBox="0 0 100 100">
+        <polyline class="line-cornered stroke-still" points="0,0 100,0 100,100" stroke-width="10" fill="none"></polyline>
+        <polyline class="line-cornered stroke-still" points="0,0 0,100 100,100" stroke-width="10" fill="none"></polyline>
+        <polyline class="line-cornered stroke-animation" points="0,0 100,0 100,100" stroke-width="10" fill="none"></polyline>
+        <polyline class="line-cornered stroke-animation" points="0,0 0,100 100,100" stroke-width="10" fill="none"></polyline>
+      </svg>
+    </div>
+
     <header class="section header" id="home">
         <div class="header__top top">
           <div class="top__inner">
@@ -64,7 +74,7 @@
                     <a class="content__contact-btn" href="#contact">Contact me</a>
                   </div>
                   <div class="content__img-box">
-                    <picture><source srcset="img/header-me.webp" type="image/webp"><img class="content__img" src="img/header-me.jpg" alt="" /></picture>
+                    <img class="content__img" src="img/header-me.jpg" alt="" />
                   </div>
                 </div>
               </div>
@@ -112,7 +122,7 @@
         <div class="container">
           <div class="about__grid">
             <div class="about__img-box about__img-box--first">
-              <picture><source srcset="img/me/monster.webp" type="image/webp"><img src="img/me/monster.jpg" alt="" class="about__img" /></picture>
+              <img src="img/me/monster.jpg" alt="" class="about__img" />
             </div>
             <div class="about__main main">
               <h5 class="main__title">About me</h5>
@@ -122,10 +132,10 @@
               </p>
             </div>
             <div class="about__img-box about__img-box--second">
-              <picture><source srcset="img/me/wall.webp" type="image/webp"><img src="img/me/wall.jpg" alt="" class="about__img" /></picture>
+              <img src="img/me/wall.jpg" alt="" class="about__img" />
             </div>
             <div class="about__img-box about__img-box--third">
-              <picture><source srcset="img/me/winter.webp" type="image/webp"><img src="img/me/winter.jpg" alt="" class="about__img" /></picture>
+              <img src="img/me/winter.jpg" alt="" class="about__img" />
             </div>
           </div>
         </div>
@@ -141,7 +151,7 @@
               <div class="slide__left-box">
                 
                 <a href="http://www.promotion-host.byethost8.com/?i=1" target="_blank" class="slide__link">
-                  <picture><source srcset="img/portfolio/promotion.webp" type="image/webp"><img class="slide__img" src="img/portfolio/promotion.png" alt="promotion-img" /></picture>
+                  <img class="slide__img" src="img/portfolio/promotion.png" alt="promotion-img" />
                 </a>
 
               </div>
@@ -157,7 +167,7 @@
             <div class="portfolio__slider-item swiper-slide slide">
               <div class="slide__left-box">
                 <a class="slide__link" href="http://www.paradigma-test.byethost31.com/?i=1">
-                  <picture><source srcset="img/portfolio/paradigma.webp" type="image/webp"><img alt="" class="slide__img" src="img/portfolio/paradigma.png" /></picture>
+                  <img alt="" class="slide__img" src="img/portfolio/paradigma.png" />
                 </a>
               </div>
               <div class="slide__description">
@@ -172,7 +182,7 @@
             <div class="portfolio__slider-item swiper-slide slide">
               <div class="slide__left-box">
                 <a href="http://www.hotels-host.byethost16.com/index.html" class="slide__link">
-                  <picture><source srcset="img/portfolio/hotels.webp" type="image/webp"><img src="img/portfolio/hotels.png" alt="" class="slide__img" /></picture>
+                  <img src="img/portfolio/hotels.png" alt="" class="slide__img" />
                 </a>
               </div>
               <div class="slide__description">
@@ -187,7 +197,7 @@
             <div class="portfolio__slider-item swiper-slide slide">
               <div class="slide__left-box">
                 <a href="https://github.com/CodeLearningSlayer/glee" class="slide__link">
-                  <picture><source srcset="img/portfolio/glee.webp" type="image/webp"><img src="img/portfolio/glee.png" alt="" class="slide__img" /></picture>
+                  <img src="img/portfolio/glee.png" alt="" class="slide__img" />
                 </a>
               </div>
               <div class="slide__description">
@@ -291,5 +301,5 @@
       </div>
     </footer>
   </body>
-  <script src="js/app.min.js?__v=20220904170542"></script>
+  <script src="js/app.min.js"></script>
 </html>
