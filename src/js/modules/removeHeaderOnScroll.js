@@ -7,7 +7,7 @@ export default function removeOnScroll(){
     window.addEventListener("scroll", () => {
         let scrolled = window.scrollY;
         console.log(scrolled);
-        if(scrolled > firstSectionHeight && scrolled > scrollPrev){
+        if(scrolled > firstSectionHeight && scrolled > scrollPrev && header.querySelector(".header__nav").classList.contains("header__nav--active") === false){
             header.classList.add("header__top--out");
         } 
         else{

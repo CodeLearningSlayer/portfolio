@@ -1155,14 +1155,7 @@ input.check-toggle-round-flat + label:after {
   bottom: 4px;
   width: 48px;
   background-color: #fff;
-  -webkit-border-radius: 52px;
-  -moz-border-radius: 52px;
-  -ms-border-radius: 52px;
-  -o-border-radius: 52px;
   border-radius: 52px;
-  -webkit-transition: margin 0.2s;
-  -moz-transition: margin 0.2s;
-  -o-transition: margin 0.2s;
   transition: margin 0.2s;
 }
 
@@ -1384,7 +1377,6 @@ input.check-toggle-round-flat:checked + label:after {
 
 .swiper-button-prev,
 .swiper-button-next {
-  opacity: 1 !important;
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -1405,6 +1397,10 @@ input.check-toggle-round-flat:checked + label:after {
 .swiper-button-next::after {
   width: 26px;
   background-image: url("../img/slider/next-arrow.svg");
+}
+
+.swiper-button-disabled {
+  opacity: 0.5;
 }
 
 .contact {

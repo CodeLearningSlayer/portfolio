@@ -270,14 +270,7 @@
     bottom: 4px;
     width: 48px;
     background-color: #fff;
-    -webkit-border-radius: 52px;
-    -moz-border-radius: 52px;
-    -ms-border-radius: 52px;
-    -o-border-radius: 52px;
     border-radius: 52px;
-    -webkit-transition: margin 0.2s;
-    -moz-transition: margin 0.2s;
-    -o-transition: margin 0.2s;
     transition: margin 0.2s;
   }
   
@@ -508,7 +501,6 @@
 
 .swiper-button-prev,
 .swiper-button-next{
-    opacity: 1 !important;
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -533,6 +525,10 @@
         background-image: url("@img/slider/next-arrow.svg");
     }
 
+}
+
+.swiper-button-disabled{
+    opacity: .5;
 }
 
 .contact{
