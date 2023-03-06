@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.min.css?__v=20230306161949" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css?__v=20230306161949"
+    />
+    <title>My site</title>
+  </head>
+  <body>
+
+    <div class="preloader">
+      <svg width="200" height="200" viewBox="0 0 100 100">
+        <polyline class="line-cornered stroke-still" points="0,0 100,0 100,100" stroke-width="10" fill="none"></polyline>
+        <polyline class="line-cornered stroke-still" points="0,0 0,100 100,100" stroke-width="10" fill="none"></polyline>
+        <polyline class="line-cornered stroke-animation" points="0,0 100,0 100,100" stroke-width="10" fill="none"></polyline>
+        <polyline class="line-cornered stroke-animation" points="0,0 0,100 100,100" stroke-width="10" fill="none"></polyline>
+      </svg>
+    </div>
+
+    <header class="section header" id="home">
+        <div class="header__top top">
+          <div class="top__inner">
+            <a class="logo" href="#">
+              <div class="logo__img-box"></div>
+              <span class="logo__text">RBTSV</span>
+            </a>
+            <div class="switch">
+              <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox">
+              <label for="language-toggle"></label>
+              <span class="on">RU</span>
+              <span class="off">EN</span>
+            </div>
+            <nav class="navbar">
+              <ul class="header__nav">
+                <li class="header__nav-item">
+                  <a href="#home" class="header__nav-link header__nav-link--active"
+                    >Home</a
+                  >
+                </li>
+                <li class="header__nav-item">
+                  <a href="#about" class="header__nav-link">About me</a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="#portfolio" class="header__nav-link">Portfolio</a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="#contact" class="header__nav-link">Contact</a>
+                </li>
+              </ul>
+            </nav>
+            
+            <button class="header__burger">
+              <span></span>
+            </button>
+
+          </div>
+        </div>
+        <div class="container">
+            <div class="header__content content">
+                <div class="content__inner">
+                  <div class="content__left-box">
+                    <h3 class="content__subtext">Hello</h3>
+                    <h2 class="content__big-text">I’m Maxim Rubtsov</h2>
+                    <p class="content__text">
+                      I've been doing HTML layouts for a year now. Do you
+                      need a website design, site layout, or maybe a turnkey website?
+                      Then contact me
+                    </p>
+                    <a class="content__contact-btn" href="#contact">Contact me</a>
+                  </div>
+                  <div class="content__img-box">
+                    <picture><source srcset="img/header-me.webp" type="image/webp"><img class="content__img" src="img/header-me.jpg" alt="" /></picture>
+                  </div>
+                </div>
+              </div>
+        </div>
+        
+    </header>
+
+     <section class="skills">
+      <div class="container">
+        <h3 class="skills__title">My skills</h3>
+        <h4 class="skills__subtitle">I've practiced in</h4>
+        <div class="skills__wrapper">
+          <div class="skills__item">
+            <i class="skills__icon devicon-css3-plain"></i>
+            <p class="skills__name">CSS3</p>
+          </div>
+          <div class="skills__item">
+            <i class="skills__icon devicon-html5-plain"></i>
+            <p class="skills__name">HTML5</p>
+          </div>
+          <div class="skills__item">
+            <i class="skills__icon devicon-javascript-plain"></i>
+            <p class="skills__name">JS</p>
+          </div>
+          <div class="skills__item">
+            <i class="skills__icon devicon-jquery-plain"></i>
+            <p class="skills__name">JQuery</p>
+          </div>
+          <div class="skills__item">
+            <i class="skills__icon devicon-git-plain"></i>
+            <p class="skills__name">Git</p>
+          </div>
+          <div class="skills__item">
+            <i class="skills__icon devicon-figma-plain"></i>
+            <p class="skills__name">Figma</p>
+          </div>
+          <div class="skills__item">
+            <i class="skills__icon devicon-sass-original"></i>
+            <p class="skills__name">Sass</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section about" id="about">
+        <div class="container">
+          <div class="about__grid">
+            <div class="about__img-box about__img-box--first">
+              <picture><source srcset="img/me/monster.webp" type="image/webp"><img src="img/me/monster.jpg" alt="" class="about__img" /></picture>
+            </div>
+            <div class="about__main main">
+              <h5 class="main__title">About me</h5>
+              <p class="main__text">
+                Hi everyone! So, you've already known that my name is Maxim.
+                I'm a third-year student of Ivanovo State Power University. I'm studying software engineering. Why did I choose programming? it’s as clear as day - firstly, I like it! Secondly, in a dynamically developing modern world, programming is considered the profession of the future. Thirdly, this profession allows to provide me and my family, and finally, my dream‘ll come true: life without limitations. Nowadays I‘m working with website layouts, design, and frontend development. I want to become a professional frontend developer and achieve heights in programming. Why should you choose me? I approach to any order with great responsibility, I have a systematic approach to my job, and I fully understand the importance of each project for the employer, the costumer and for me. Believe me, you’ll get the highest results of your projects working with me. If you are interested in me, I’ll leave my contacts below. Hoping for our future cooperation, <span>Rubtsov Maxim</span>.
+              </p>
+            </div>
+            <div class="about__img-box about__img-box--second">
+              <picture><source srcset="img/me/wall.webp" type="image/webp"><img src="img/me/wall.jpg" alt="" class="about__img" /></picture>
+            </div>
+            <div class="about__img-box about__img-box--third">
+              <picture><source srcset="img/me/winter.webp" type="image/webp"><img src="img/me/winter.jpg" alt="" class="about__img" /></picture>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   <section class="section portfolio" id="portfolio">
+      <div class="container">
+        <h3 class="portfolio__title">Portfolio</h3>
+        <div class="portfolio__slider swiper">
+          <div class="portfolio__slider-wrapper swiper-wrapper">
+            <div class="portfolio__slider-item swiper-slide slide">
+              <div class="slide__left-box">
+                
+                <a href="http://www.promotion-host.byethost8.com/?i=1" target="_blank" class="slide__link">
+                  <picture><source srcset="img/portfolio/promotion.webp" type="image/webp"><img class="slide__img" src="img/portfolio/promotion.png" alt="promotion-img" /></picture>
+                </a>
+
+              </div>
+              <div class="slide__description">
+                <h5 class="slide__name">Promotion landing</h5>
+                <p class="slide__text">
+                  Site of your company product, helps to promote it and attract investors. Click on the image to visit site. <br> P.S. Browser may warn you that this site is dangerous. Don't worry. It happens because site is on free hosting. Sorry, I can't afford hosting yet)
+                  If you don't want to click on image, click on the link below.
+                </p>
+                <a href="http://www.promotion-host.byethost8.com/?i=1" class="slide__more">More</a>
+              </div>
+            </div>
+            <div class="portfolio__slider-item swiper-slide slide">
+              <div class="slide__left-box">
+                <a class="slide__link" href="http://www.paradigma-test.byethost31.com/?i=1">
+                  <picture><source srcset="img/portfolio/paradigma.webp" type="image/webp"><img alt="" class="slide__img" src="img/portfolio/paradigma.png" /></picture>
+                </a>
+              </div>
+              <div class="slide__description">
+                <h5 class="slide__name">Paradigma landing</h5>
+                <p class="slide__text">
+                  Test task from paradigma.website. It may look as easy web page but i've learned a lot from this experience. <br> P.S. Browser may warn you that this site is dangerous. Don't worry. It happens because site is on free hosting. Sorry, I can't afford hosting yet)
+                  If you don't want to click on image, click on the link below.
+                </p>
+                <a href="http://www.paradigma-test.byethost31.com/?i=1" class="slide__more">More</a>
+              </div>
+            </div>
+            <div class="portfolio__slider-item swiper-slide slide">
+              <div class="slide__left-box">
+                <a href="http://www.hotels-host.byethost16.com/index.html" class="slide__link">
+                  <picture><source srcset="img/portfolio/hotels.webp" type="image/webp"><img src="img/portfolio/hotels.png" alt="" class="slide__img" /></picture>
+                </a>
+              </div>
+              <div class="slide__description">
+                <h5 class="slide__name">Hotels landing</h5>
+                <p class="slide__text">
+                  Landing for hotel. Everything about it, prices, rooms, facilities and contacts. <br> P.S. Browser may warn you that this site is dangerous. Don't worry. It happens because site is on free hosting. Sorry, I can't afford hosting yet)
+                  If you don't want to click on image, click on the link below.
+                </p>
+                <a href="http://www.hotels-host.byethost16.com/index.html" class="slide__more">More</a>
+              </div>
+            </div>
+            <div class="portfolio__slider-item swiper-slide slide">
+              <div class="slide__left-box">
+                <a href="https://github.com/CodeLearningSlayer/glee" class="slide__link">
+                  <picture><source srcset="img/portfolio/glee.webp" type="image/webp"><img src="img/portfolio/glee.png" alt="" class="slide__img" /></picture>
+                </a>
+              </div>
+              <div class="slide__description">
+                <h5 class="slide__name">Glee shop</h5>
+                <p class="slide__text">
+                  Online shop of furniture. I made it on course of html layout. I've learned a lot of features
+                  such as hidden checkbox's, range-sliders, shop filter and etc.
+                </p>
+                <a href="https://github.com/CodeLearningSlayer/glee" class="slide__more">More</a>
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
+ 
+    <section class="section contact" id="contact">
+      <div class="container">
+        <h3 class="contact__title">You can find me here</h3>
+        <ul class="contact__list">
+          <li class="contact__item">
+            <a class="contact__link" href="tg://resolve?domain=@gibb4ansk1y" target="_blank">
+              <img
+                class="contact__img"
+                src="img/contact/icons8-telegram-app.svg"
+                alt="contact-img"
+              />
+            </a>
+          </li>
+          <li class="contact__item">
+            <a class="contact__link" href="https://github.com/CodeLearningSlayer" target="_blank">
+              <img
+                src="img/contact/icons8-github.svg"
+                alt="contact-img"
+                class="contact__img"
+              />
+            </a>
+          </li>
+          <li class="contact__item">
+            <a class="contact__link" href="https://vk.com/maximrubtsov" target="_blank">
+              <img
+                src="img/contact/icons8-vk-circled.svg"
+                alt="contact-img"
+                class="contact__img"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__item">
+            <ul class="footer__nav">
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#home">Home</a>
+              </li>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#about">About me</a>
+              </li>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#portfolio">Portfolio</a>
+              </li>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+            <div class="footer__item footer__contact">
+              <p class="footer__item-name footer__communication">Contact</p>
+              <p class="footer__mail">
+                Email:
+                <span>
+                  <a href="mailto:rubtsov.maks2015@yandex.ru">
+                    rubtsov.maks2015@yandex.ru
+                    </a>
+                </span
+                >
+              </p>
+              <p class="footer__inst ">
+                Inst: <a target="_blank" href="https://www.instagram.com/thu99ernaut/">thu99ernaut</a>
+              </p>
+            </div>
+            <div class="footer__item footer__logo">
+                <div class="footer__logo-wrapper">
+                    <a class="logo" href="#">
+                        <div class="logo__img-box"></div>
+                        <span class="logo__text">RBTSV</span>
+                    </a>
+                    <a class="footer__up" href="#home">
+                        
+                    </a>
+                </div>
+                <p class="footer__copy">Copyright © 2022, RBTSV</p>
+            </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="js/app.min.js?__v=20230306161949"></script>
+</html>
